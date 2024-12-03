@@ -1,0 +1,189 @@
+/* Base styles for both light and dark modes */
+:root {
+    --bg-color: #d6dafe;
+    --text-color: #000;
+    --button-bg: #6C63FF;
+    --button-hover-bg: #4A4ACD;
+    --card-bg: #fff;
+    --headline-color: #6C63FF;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: "Amatic SC", sans-serif;
+
+}
+
+.container {
+    width: 95%;
+    height: 80%;
+    max-width: 1200px;
+    text-align: center;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.logo h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 120px;
+    color: #F4A261;
+    margin-bottom: 20px;
+    position: absolute;
+    right: 63%;
+    bottom: 60%;
+    font-family: 'Amatic SC', cursive;
+
+}
+
+.content .headline {
+    font-size: 55px;
+    font-weight: 800;
+    color: var(--headline-color);
+    margin-bottom: 15px;
+    position: absolute;
+    right: 50%;
+    bottom: 47%;
+}
+
+.content .subheadline {
+    font-size: 40px;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    position: absolute;
+    right: 60%;
+    bottom: 38%;
+}
+/* Toggle container styling */
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Circular toggle button */
+.toggle-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 40%;
+    background-color: #4A4ACD; /* Light orange background for the toggle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position:fixed;
+    top:24%;
+    right:58%;
+}
+
+.toggle-btn:hover {
+    background-color: #fff; /* Darker orange for hover effect */
+    transform: scale(1.1);
+}
+
+.toggle-btn:active {
+    transform: scale(0.95); /* Slight press-down effect */
+}
+
+/* Toggle icon styling */
+.toggle-icon {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+/* Dark mode styles for the toggle */
+body.dark-mode .toggle-btn {
+    background-color: #4F5187; /* Blue for dark mode toggle */
+}
+
+body.dark-mode .toggle-btn:hover {
+    background-color: #232345;
+}
+body.dark-mode .toggle-icon {
+    transform: rotate(180deg); /* Cute rotation effect */
+    content: "☀️"; /* Change icon dynamically */
+}
+
+.signup-button {
+    padding: 12px 24px;
+    font-size: 22px;
+    color: #fff;
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    right: 62.7%;
+    bottom: 27%;
+    font-family: "Poppins", serif;
+    font-weight: 300;
+}
+
+.signup-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+
+
+.illustration img {
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+    max-height: 550px;
+    margin-top: 30px;
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+}
+
+/* Dark mode variables */
+.dark-mode {
+    --bg-color: #4F5187;
+    --text-color: #e2e8f0;
+    --button-bg: #4d4d8f;
+    --button-hover-bg: #1b1b34;
+    --card-bg: #2C2C54;
+    --headline-color:#c1c3fd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content .headline {
+        font-size: 24px;
+    }
+
+    .content .subheadline {
+        font-size: 16px;
+    }
+
+    .signup-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content .headline {
+        font-size: 20px;
+    }
+
+    .content .subheadline {
+        font-size: 14px;
+    }
+
+    .signup-button {
+        padding: 8px 16px;
+    }
+}
